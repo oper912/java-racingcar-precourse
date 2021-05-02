@@ -11,5 +11,6 @@ public class RacingcarController {
 
     public void run() {
         inputView.inputCarNames();
+        inputView.inputMoveCount();
     }
 }
