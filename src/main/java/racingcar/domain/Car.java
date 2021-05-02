@@ -19,7 +19,7 @@ public class Car {
 
     public void move(MoveableStrategy moveableStrategy) {
         if (moveableStrategy.moveable()) {
-            position.progress();
+            position.move();
         }
     }
 

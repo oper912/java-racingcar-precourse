@@ -15,7 +15,7 @@ public class Position {
         return new Position(INIT_POSITION);
     }
 
-    public void progress() {
+    public void move() {
         this.position++;
     }
 

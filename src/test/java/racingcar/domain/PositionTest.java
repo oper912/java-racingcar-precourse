@@ -22,12 +22,12 @@ class PositionTest {
 
     @DisplayName("이동하면 position이 증가한다")
     @Test
-    void progress() {
+    void move() {
         // given
         Position position = Position.init();
 
         // when
-        position.progress();
+        position.move();
 
         // then
         assertThat(position.getPosition()).isEqualTo(1);
