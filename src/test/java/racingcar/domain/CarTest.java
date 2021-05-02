@@ -30,6 +30,6 @@ class CarTest {
         car.move(new TestMoveableStrategy());
 
         // then
-        assertThat(car.positionToString()).isEqualTo("-");
+        assertThat(car.getPosition()).isEqualTo(1);
     }
 }

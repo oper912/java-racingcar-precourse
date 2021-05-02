@@ -23,8 +23,8 @@ public class Car {
         }
     }
 
-    public String positionToString() {
-        return position.positionToString();
+    public int getPosition() {
+        return position.getPosition();
     }
 
     @Override

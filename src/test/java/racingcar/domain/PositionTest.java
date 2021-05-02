@@ -11,16 +11,16 @@ class PositionTest {
     @Test
     void init() {
         // given
-        Position position = Position.init();
+        int expectedPosition = 0;
 
         // when
-        String positionString = position.positionToString();
+        Position position = Position.init();
 
         // then
-        assertThat(positionString).isEqualTo("");
+        assertThat(position.getPosition()).isEqualTo(expectedPosition);
     }
 
-    @DisplayName("전진하면 position이 증가한다")
+    @DisplayName("이동하면 position이 증가한다")
     @Test
     void progress() {
         // given
@@ -30,6 +30,6 @@ class PositionTest {
         position.progress();
 
         // then
-        assertThat(position.positionToString()).isEqualTo("-");
+        assertThat(position.getPosition()).isEqualTo(1);
     }
 }

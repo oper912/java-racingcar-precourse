@@ -3,7 +3,6 @@ package racingcar.domain;
 import java.util.Objects;
 
 public class Position {
-    private static final String POSITION_CHARACTER = "-";
     private static final int INIT_POSITION = 0;
 
     private int position;
@@ -20,12 +19,8 @@ public class Position {
         this.position++;
     }
 
-    public String positionToString() {
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < position; i++) {
-            builder.append(POSITION_CHARACTER);
-        }
-        return builder.toString();
+    public int getPosition() {
+        return position;
     }
 
     @Override
@@ -39,5 +34,10 @@ public class Position {
     @Override
     public int hashCode() {
         return Objects.hash(position);
+    }
+
+    @Override
+    public String toString() {
+        return String.valueOf(position);
     }
 }
