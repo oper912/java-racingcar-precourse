@@ -8,12 +8,12 @@ import racingcar.view.ResultView;
 
 import java.util.List;
 
-public class RacingcarController {
+public class RacingCarController {
     private final InputView inputView;
     private final ResultView resultView;
     private final MoveableStrategy moveableStrategy;
 
-    public RacingcarController() {
+    public RacingCarController() {
         this.inputView = new InputView();
         this.resultView = new ResultView();
         this.moveableStrategy = new RandomMoveableStrategy();
