@@ -1,34 +1,34 @@
 package racingcar.domain;
 
-import racingcar.exception.InvalidMoveCountException;
+import racingcar.exception.InvalidRaceCountException;
 
 import java.util.Objects;
 
-public class MoveCount {
+public class RaceCount {
     private static final int END_COUNT = 0;
 
     private int count;
 
-    private MoveCount(final int count) {
+    private RaceCount(final int count) {
         this.count = count;
     }
 
-    public static MoveCount from(final int count) {
+    public static RaceCount from(final int count) {
         validateCount(count);
-        return new MoveCount(count);
+        return new RaceCount(count);
     }
 
     private static void validateCount(final int count) {
         if (END_COUNT >= count) {
-            throw new InvalidMoveCountException();
+            throw new InvalidRaceCountException();
         }
     }
 
-    public boolean isMoveable() {
+    public boolean isRaceable() {
         return END_COUNT < count;
     }
 
-    public void minus() {
+    public void race() {
         this.count--;
     }
 
@@ -36,8 +36,8 @@ public class MoveCount {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        MoveCount moveCount = (MoveCount) o;
-        return count == moveCount.count;
+        RaceCount raceCount = (RaceCount) o;
+        return count == raceCount.count;
     }
 
     @Override

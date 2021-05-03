@@ -6,24 +6,24 @@ import java.util.List;
 
 public class RacingGame {
     private final Cars cars;
-    private final MoveCount moveCount;
+    private final RaceCount raceCount;
 
-    private RacingGame(final Cars cars, final MoveCount moveCount) {
+    private RacingGame(final Cars cars, final RaceCount raceCount) {
         this.cars = cars;
-        this.moveCount = moveCount;
+        this.raceCount = raceCount;
     }
 
-    public static RacingGame init(final List<String> carNames, final int moveCount) {
-        return new RacingGame(Cars.from(carNames), MoveCount.from(moveCount));
+    public static RacingGame init(final List<String> carNames, final int raceCount) {
+        return new RacingGame(Cars.from(carNames), RaceCount.from(raceCount));
     }
 
     public boolean isRaceable() {
-        return moveCount.isMoveable();
+        return raceCount.isRaceable();
     }
 
     public void race(MoveableStrategy moveableStrategy) {
         cars.move(moveableStrategy);
-        moveCount.minus();
+        raceCount.race();
     }
 
     public List<Car> getCars() {

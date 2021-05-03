@@ -21,8 +21,8 @@ public class RacingcarController {
 
     public void run() {
         List<String> carNames = inputView.inputCarNames();
-        int moveCount = inputView.inputMoveCount();
-        RacingGame racingGame = RacingGame.init(carNames, moveCount);
+        int raceCount = inputView.inputRaceCount();
+        RacingGame racingGame = RacingGame.init(carNames, raceCount);
 
         resultView.printResultMessage();
         while (racingGame.isRaceable()) {
