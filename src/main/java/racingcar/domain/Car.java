@@ -23,6 +23,10 @@ public class Car {
         }
     }
 
+    public boolean isWinner(Position winnerPosition) {
+        return position.equals(winnerPosition);
+    }
+
     public int getPosition() {
         return position.getPosition();
     }

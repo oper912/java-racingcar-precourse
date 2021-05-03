@@ -15,6 +15,10 @@ public class Position {
         return new Position(INIT_POSITION);
     }
 
+    public static Position from(final int position) {
+        return new Position(position);
+    }
+
     public void move() {
         this.position++;
     }
