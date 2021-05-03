@@ -20,7 +20,7 @@ class CarTest {
                 .isInstanceOf(CarNameValidationException.class);
     }
 
-    @DisplayName("자동차가 이동하면 position이 증가한다")
+    @DisplayName("자동차가 이동하면 위치가 증가한다")
     @Test
     void move() {
         // given

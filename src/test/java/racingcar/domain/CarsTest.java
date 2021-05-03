@@ -29,7 +29,7 @@ class CarsTest {
         assertThat(carsSize).isEqualTo(expectedSize);
     }
 
-    @DisplayName("이동하면 모든 자동차들의 position이 증가한다")
+    @DisplayName("이동하면 자동차들의 위치가 증가한다")
     @Test
     void move() {
         // given
@@ -48,7 +48,7 @@ class CarsTest {
         );
     }
 
-    @DisplayName("unmodifiableList를 수정하려고하면 예외가 발생한다")
+    @DisplayName("unmodifiableList를 수정하면 예외가 발생한다")
     @Test
     void unmodifiableList_change_exception() {
         // given

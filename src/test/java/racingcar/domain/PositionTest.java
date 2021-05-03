@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class PositionTest {
 
-    @DisplayName("초기 position은 0으로 생성된다")
+    @DisplayName("초기 위치는 0으로 생성된다")
     @Test
     void init() {
         // given
@@ -20,7 +20,7 @@ class PositionTest {
         assertThat(position.getPosition()).isEqualTo(expectedPosition);
     }
 
-    @DisplayName("이동하면 position이 증가한다")
+    @DisplayName("이동하면 위치가 증가한다")
     @Test
     void move() {
         // given
