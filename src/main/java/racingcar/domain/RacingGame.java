@@ -25,4 +25,8 @@ public class RacingGame {
         cars.move(moveableStrategy);
         moveCount.minus();
     }
+
+    public List<Car> getCars() {
+        return cars.getCars();
+    }
 }
