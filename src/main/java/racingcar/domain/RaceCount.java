@@ -5,6 +5,7 @@ import racingcar.exception.InvalidRaceCountException;
 import java.util.Objects;
 
 public class RaceCount {
+    private static final String INVALID_COUNT_MESSAGE = "유효하지않은 경주 횟수입니다.";
     private static final int END_COUNT = 0;
 
     private int count;
@@ -20,7 +21,7 @@ public class RaceCount {
 
     private static void validateCount(final int count) {
         if (END_COUNT >= count) {
-            throw new InvalidRaceCountException();
+            throw new InvalidRaceCountException(INVALID_COUNT_MESSAGE);
         }
     }
 

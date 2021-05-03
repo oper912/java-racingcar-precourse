@@ -17,7 +17,7 @@ class RaceCountTest {
     void check_move_count(int raceCount) {
         assertThatThrownBy(() -> RaceCount.from(raceCount))
                 .isInstanceOf(InvalidRaceCountException.class)
-                .hasMessage("유효하지않은 이동 횟수입니다.");
+                .hasMessage("유효하지않은 경주 횟수입니다.");
     }
 
     @DisplayName("남아있는 경주 횟수가 0보다 크면 경주가 가능하다")
