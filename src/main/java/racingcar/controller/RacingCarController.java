@@ -26,11 +26,11 @@ public class RacingCarController {
         int raceCount = inputView.inputRaceCount();
         RacingGame racingGame = RacingGame.init(carNames, raceCount);
 
-        raceCars(racingGame);
+        race(racingGame);
         assignWinners(racingGame.getCars());
     }
 
-    private void raceCars(final RacingGame racingGame) {
+    private void race(final RacingGame racingGame) {
         resultView.printResultMessage();
         while (racingGame.isRaceable()) {
             racingGame.race(moveableStrategy);
