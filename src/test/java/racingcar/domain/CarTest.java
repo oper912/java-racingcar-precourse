@@ -32,4 +32,18 @@ class CarTest {
         // then
         assertThat(car.getPosition()).isEqualTo(1);
     }
+
+    @DisplayName("우승 위치와 같으면 우승자로 판단한다")
+    @Test
+    void isWinner() {
+        // given
+        Car car = Car.from("snow");
+        Position winnerPosition = Position.from(1);
+
+        // when
+        car.move(new TestMoveableStrategy());
+
+        // then
+        assertThat(car.isWinner(winnerPosition)).isTrue();
+    }
 }

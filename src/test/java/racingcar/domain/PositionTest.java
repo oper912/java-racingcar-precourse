@@ -2,6 +2,8 @@ package racingcar.domain;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -31,5 +33,20 @@ class PositionTest {
 
         // then
         assertThat(position.getPosition()).isEqualTo(1);
+    }
+
+    @DisplayName("우승 위치와 동일한지 판단한다")
+    @ParameterizedTest
+    @CsvSource(value = {"5,5,true", "4,5,false"})
+    void equals_winner_position(int positionNumber, int winnerPositionNumber, boolean expected) {
+        // given
+        Position position = Position.from(positionNumber);
+        Position winnerPosition = Position.from(winnerPositionNumber);
+
+        // when
+        boolean isWinnerPosition = position.equals(winnerPosition);
+
+        // then
+        assertThat(isWinnerPosition).isEqualTo(expected);
     }
 }
