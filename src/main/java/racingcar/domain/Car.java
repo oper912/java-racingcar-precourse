@@ -17,13 +17,13 @@ public class Car {
         return new Car(Name.from(name));
     }
 
-    public void move(MoveableStrategy moveableStrategy) {
+    public void move(final MoveableStrategy moveableStrategy) {
         if (moveableStrategy.moveable()) {
             position.move();
         }
     }
 
-    public boolean isWinner(Position winnerPosition) {
+    public boolean isWinner(final Position winnerPosition) {
         return position.equals(winnerPosition);
     }
 

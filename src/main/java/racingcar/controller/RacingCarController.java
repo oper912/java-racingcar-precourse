@@ -30,7 +30,7 @@ public class RacingCarController {
         assignWinners(racingGame.getCars());
     }
 
-    private void raceCars(RacingGame racingGame) {
+    private void raceCars(final RacingGame racingGame) {
         resultView.printResultMessage();
         while (racingGame.isRaceable()) {
             racingGame.race(moveableStrategy);

@@ -22,7 +22,7 @@ public class Cars {
         return new Cars(cars);
     }
 
-    public void move(MoveableStrategy moveableStrategy) {
+    public void move(final MoveableStrategy moveableStrategy) {
         for (Car car : cars) {
             car.move(moveableStrategy);
         }

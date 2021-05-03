@@ -22,7 +22,7 @@ public class Winners {
         }
     }
 
-    private void addWinners(Car car, Position winnerPosition) {
+    private void addWinners(final Car car, final Position winnerPosition) {
         if (car.isWinner(winnerPosition)) {
             this.winners.add(car);
         }
