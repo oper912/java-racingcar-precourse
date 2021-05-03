@@ -61,3 +61,68 @@
 - 우승자 출력
     - 가장 많이 이동한 자동차 이름 출력
     - 다중 우승 가능
+
+## 구조 비교
+### 구현 전 예상 구조 
+- controller
+    - RacingcarController
+- domain
+    - Car
+    - Cars
+    - MoveCount
+    - Name
+    - Position
+- strategy
+    - MovableStrategy
+    - RandomMovableStrategy
+- utils
+    - StringUtils
+- view
+    - InputView
+    - ResultView
+
+### 구현 후 구조 
+- controller
+    - RacingCarController
+- domain
+    - Car
+    - Cars
+    - Name
+    - Position
+    - RaceCount
+    - RacingGame
+    - Winners
+- exception
+    - CarNameValidationException
+    - InvalidRaceCountException
+- strategy
+    - MoveableStrategy
+    - RandomMoveableStrategy
+- utils
+    - StringUtils
+- view
+    - InputView
+    - ResultView
+
+## 역할
+- Car
+    - 경주를 하는 자동차
+    - 전진 여부 판단
+- Name
+    - 자동차의 이름
+    - 이름이 유효한 이름인지 검사
+- Position
+    - 자동차의 위치
+    - 전진시 위치값 증가
+- Cars
+    - 자동차의 일급 컬렉션
+    - 전체 자동차의 이동 관리
+- RaceCount
+    - 경주할 횟수
+    - 경주시마다 count 차감
+    - 경주 가능 여부 판단 
+- RacingGame
+    - 레이싱 게임 전체 관리 
+- Winners
+    - 우승 자동차 일급 컬렉션
+    - 우승자 배정
